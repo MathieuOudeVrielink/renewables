@@ -1,0 +1,1302 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[dvips]{graphicx}
+\DeclareGraphicsExtensions{.eps}
+\usepackage{xfrac}
+\usepackage[margin=30mm]{geometry}
+\usepackage{titlesec} \titleformat*{\section}{\small\bfseries}
+\usepackage{framed}
+\usepackage{amsmath}
+% \usepackage{amsfonts}
+\usepackage{amssymb}
+% \usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage[font={small,it}]{caption}
+\usepackage{subcaption}
+\usepackage{enumerate,mdwlist}
+\usepackage{overpic}
+\usepackage{comment}
+\usepackage{enumerate}
+% \usepackage[mtpbbi]{mtpro2}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+
+\usepackage[margin=0.5cm]{caption}
+\usepackage{cancel}
+\setlength\parindent{0pt}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setcounter{section}{-1}
+\usepackage{paralist}
+
+% \usepackage{enumitem}
+\usepackage{enumitem}
+% \setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+
+\usepackage{sectsty}
+
+% \sectionfont{\fontsize{12}{15}\selectfont}
+\title{Renewable energy sources}
+% \vspace{0.5cm}
+\author{Mathieu Oude Vrielink}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Physical quantities, energy and power}
+
+
+The annual world-wide energy consumption was about 450 EJ in the year 2006.
+
+\begin{table}[ht]
+\centering
+ \begin{tabular}{r|ll}
+  Prefix & Symbol & \\ \hline
+  exa & E & $10^{18}$ \\
+  peta & P & $10^{15}$ \\
+  tera & T & $10^{12}$ \\
+  giga & G & $10^{9}$ \\
+  mega & M & $10^{6}$ \\
+  kilo & k & $10^{3}$ \\
+  hector & h & $10^{2}$ \\
+  deca & da & $10$ \\
+  deci& d & $10^{-1}$\\
+  centi& c&$10^{-2}$\\
+  milli& m&$10^{-3}$\\
+  micro& $\mu$&$10^{-6}$\\
+  nano& n&$10^{-9}$\\
+ \end{tabular}
+\caption{Overview of the prefixes}
+\label{tab:prefixes}
+\end{table}
+One electron volt equals the amount of kinetic energy gained by one electron with zero initial velocity when it is accelerated by a potential difference of one volt, $1 \ eV \approx 1.602 \cdot 10^{-19}\ J$. \bigskip
+
+On a sunny day, the irradiance around noon can be 1000 W/$m^2$ in The Netherlands.
+
+
+\section{General introduction}
+
+\subsection{Purpose of the course Renewable Energy Sources}
+The oil crises of 1973 - 1979 clarified the need for oil. The oil price increased very suddenly in the year 2000. The Golf war in 1991 was caused by the fact that industrialized countries wanted their oil supply uninterrupted. Many countries are dependent on the supply of a few oil exporting countries. \bigskip
+
+Additionally, fossil fuels are coupled with serious environmental problems: extra greenhouse effect, smog and acid rain.  In order to solve the problems related to our energy supply, more and more attention is paid to:
+\begin{enumerate}
+ \item The 'clean' use of fossil energy sources 
+ \item The efficient use of energy
+ \item The use of sustainable or renewable energy sources, although not every renewable energy source is sustainable under all circumstances.
+\end{enumerate}
+
+\emph{Sustainable development is a process of change in which the use of resources, the direction of the technological development and institutional change are in harmony and increase possibilities to meet human needs and desires, both today and in the future.}
+
+\subsection{The nature of the social energy need}
+
+Power consumption estimates are shown in \cref{tab:pc}
+
+\begin{table}[ht]
+  \begin{tabular}{rll}
+   && Average Power \\
+   && consumption (kW/captia) \\ \hline
+   Prehistoric man & 1e6 yrs BC.  & 0.2 (preparing food)\\
+   Neanderthal man (Primitive hunter) & 1e5 yrs BC. & 0.25 (for tools)\\
+   Homo Sapiens (Primitive farmer) & 5e3 yrs BC. & 0.50 \\
+   Medieval man (Developed farmer) & around the year 1400 & 1.75 \\
+   Industrial man & Great Britain 1875 & 3.7 \\
+   Technological man & USA 1971 & 11.1
+  \end{tabular}
+\caption{Estimate of the development of average energy usage.}
+\label{tab:pc}
+\end{table}
+
+In many developing countries, the energy use is still below 1kW per captia.
+
+\subsection{Energy use}
+
+The total energy use was 480 and 578 EJ in 2004 and 2012, respectively. Fossil fuels are consumed about 40 \%, 30 \%, 30 \% for oil, gas and coal respectively. The main application of oil is the use in transportation. The primary energy consumption in The Netherlands was 3.49 EJ in the year 2010.
+\begin{table}[ht]
+\centering
+ \begin{tabular}{rll}
+  Fuel & Primary energy & Primary energy \\
+   & use 2004 (EJ) &   use 2012 (EJ)  \\ \hline
+  Fossil fuels & 78.8 \% & 78.8 \% \\
+  Nuclear & 5.4 \% & 4.1 \% \\
+  Hydropower & 5.2 \% & 6.0 \% \\
+  New renewables & 1.8 \% & 3.0 \% \\
+  Traditional biomass & 8.9 \% & 8.1 \%
+ \end{tabular}
+\caption{Distribution of energy use by fuel type.}
+\end{table}
+\subsection{Exergy}
+Exergy is the part of the energy that can be applied usefully. For instance: electrical energy has a higher quality than thermal energy. The ratio between exergy and energy is given by the so called \emph{carnot} factor, or carnot efficiency.
+
+\begin{align}
+ \eta_c = 1 - \frac{T_a}{T}
+\end{align}
+
+with $T_a$ the ambient temperature and $T$ the temperature of the heat flow, both in Kelvin. Generation of electricity has a low Carnot factor (0.35 to 0.60). Transport also has a low Carnot factor due to low efficiency of internal combustion engines (0.2 to 0.5). In the US, less than 10\% of the energy is used usefully.
+
+There are two courses for energy saving:
+\begin{enumerate}
+ \item The reduction of the energy demand
+ \item The reduction of energy losses
+\end{enumerate}
+
+
+
+\subsection{Energy from fossil fuel}
+About 2/3 of the energy produced world-wide is generated with fossil fuels. About half of all the coal that was mined in 2012, was used in China in that year. \bigskip
+
+Both oil and gas can be recovered in an conventional and unconventional fashion. Especially the reserves of unconventional gas are extremely large. Forms of unconventional gas are:
+\begin{itemize}
+ \item \textbf{Coalbed methane} - These gas reserves (90\% methane) occur in the neighborhood of coal reserves. This is currently extracted mainly in the US.
+ \item \textbf{Tight sand gas} - Gas locked in small pores in e.g. sandstone. About 25\% of all gas produced in the US was from this category in 2012.
+ \item \textbf{Shale gas} - Gas trapped in shale formations. Shale is layered hydrocarbon source rock. Horizontal drilling techniques make the shale formations accessible. 20\% of all gas produced in the US was from this category in 2012. Many countries have large reserves of this.
+ \item \textbf{Gas hydrates} - Gas located in cavities in ice. It is not yet clear how this gas can be extracted.
+ \item \textbf{Aquifer (geopressed) gas} - Gas dissolved in aquifers (water layers in the deep under the soil).
+\end{itemize}
+
+The first three categories mentioned above make the US less dependent on fossil fuel from abroad. Since so much energy reserves are still present, depletion is not the problem. The problem is whether the reserves are recoverable technically, and at what cost and what environmental impact. Mining for new oil and gas reserves will become increasingly difficult. This implies that the environmental impact risks of the production of oil and gas will increase as well. \bigskip
+
+\emph{Acid rain} is caused by the sulfur (S) and nitrogen (N) present in fuel. This causes NO$_x$, sulphurous acid (H$_2$SO$_4$) and nitric acid (HNO$_3$). These acids, together with ammonia (NH$_3$) from agriculture) cause 'acid rain'. In developed countries, the sulphurous acid is captured in
+\begin{enumerate}
+ \item the exhausts of power stations
+ \item catalytic converters on cars
+ \item adapted processing of manure in cattle breeding
+\end{enumerate}
+Not all countries do this, for financial reasons. \bigskip
+
+\emph{Smog} is a strongly polluted haze that attacks the mucous (dutch: slijm) membranes. Incomplete bunred hydrocarbons (aldehydes) play an important role, generated in small combustion engines. Additionally, burning of coal generates radioactive ashes, containing heavy metals. These ashes can be collected in large installations, using filters. 
+
+\emph{The normal greenhouse effect} enables life on earth. Gases such as H$_2$O and CO$_2$ allow to pass sunlight but absorb heat from radiation from the earth into space. \\
+\emph{The extra greenhouse effect} is caused by the increase of the concentration of greenhouse gases over time. Methane CH$_4$ and N$_2$O concentrations are increased due to agriculture activities, using fermentation etc. Chlorofluorocarbons (CFC's) were in many refrigerators. This turned out to damage the ozone layer significantly, so the use is now forbidden. The increase in CO$_2$ is mainly caused by power stations (30\%), followed by industrial processes (20\%) and transportation (20\%). \bigskip
+
+Two measures can be distinguished regarding the reduction of CO$_2$ emission from fossil fuel:
+\begin{enumerate}
+ \item \textbf{Shift to natural gas}, because then the amount of CO$_2$ per kWh of electrical energy is much lower. A coal fired power plant (with $\eta = 40 \%$) has 0.80 kg CO$_2$/kWh and a Steam and Gas Turbine (with $\eta = 59 \%$) has only 0.31 kg CO$_2$/kWh of electricity.
+ \item \textbf{Capture of CO$_2$}, where three processes can be distinguished:
+ \begin{enumerate}
+  \item \emph{Capture of CO$_2$ after combustion}, this operation captures gas in a liquid, and releases the CO$_2$ from this liquid in another step. This processes takes about 30\% of the energy produced, so over 30\% more fuel is required to remove the CO$_2$. Additionally, the investment costs are huge.
+  \item \emph{Capture of CO$_2$ after combustion, using oxygen instead of air}, where pure oxygen is used instead of air ($\approx$ 80\% nitrogen), so less exhaust gas needs to be treated. Con: oxygen fuel plant is required.
+  \item \emph{Capture of CO$_2$ before combustion}, which can only be used in combination with syngas. Syngas (H$_2$ + CO) can be obtained by gasification of coal or biomass. The CO is converted into CO$_2$ and can then be captured before combustion.
+ \end{enumerate}
+\end{enumerate}
+
+Huge investments and much more development effort is required to apply capture and sequestration (CCS) on a large scale.
+
+\subsection{Nuclear energy}
+In 2014, 434 nuclear reactors are in use with a total of 0.4 TW covering 11\% of the world electricity consumption. Nuclear power has very low CO$_2$ emissions per kWh electricity. For light nuclei (e.g. H, He, Li) the average binding energy of the nucleons increases with the number of nucleons in the nucleus of those elements. For very heavy nuclei (e.g. U, Pu) the average binding energy of the nucleons decreases with increasing number of nucleons. Therefore both in fusion (light nuclei) and fission (heavy nuclei) energy is released. \bigskip
+
+An example of a fission reactor:
+\begin{align}
+ {^{235}}U + n \rightarrow {^{93}}Sr + {^{140}}Xe + 3n + 203 MeV
+\end{align}
+With strontium (Sr) and xenon (Xe) the fission products. In order to maintain a chain reaction, at least 3\% of the fuel needs to be ${^{235}}$U. Natural uranium is only about 0.7\% ${^{235}}$U, the rest is ${^{238}}$U, so natural uranium needs to be enriched first. The current reserves are sufficient for about 60-100 years. \bigskip
+
+Fission reactors have the following nuclear waste:
+\begin{itemize}
+ \item \textbf{Uranium}, not used in the reaction. This can be used for new fuel rods.
+ \item \textbf{The actinide ${^{239}}$Pu}, this can be reused in both breeder reactors and conventional reactors. It can also be used for nuclear weapons. 
+ \item \textbf{Other actinides and fission products}, heaving lifetimes from a few hundred years to millions of years.
+\end{itemize}
+
+Underground storage of the products are still under investigation, as it needs to be stored for a long time without causing any damage. \bigskip
+
+A \emph{breeder reactor} is a fission reactor as well, but uses a mix of ${^{238}}$U and ${^{239}}$Pu. Where ${^{239}}$Pu is responsible for the nuclear chain reaction. Because ${^{238}}$U is the most common isotope, natural uranium can be used very effectively, implying enough reserves for the next 1000 years. \bigskip
+
+Breeder reactors are still under development and therefore not (yet?) used on a commercial scale. The risk is a nuclear explosion as was the case in Chernobyl 1986. Failure of the system might lead to a run-away of the reaction with rapid increase of the reactor reactivity. Cooling needs to be continued after a reactor stop due to decay of the fission products. The chance of an accident can be made small but not equal to zero as shown by accidents in the past. Currently, intrinsic safe reactors are being developed that automatically stop in the case of an accident. \bigskip
+
+Objections to nuclear energy are:
+\begin{itemize}
+ \item A large accident can struck many people deadly.
+ \item Waste stays radioactive for a long time.
+ \item Nuclear weapons can be developed
+ \item Culture, as experience learns that nuclear energy is not compatible with rapid cultural changes.
+\end{itemize}
+
+\subsection{The IPCC reports}
+The IPCC issues three reports on climate change:
+\begin{itemize}
+ \item \emph{The Physical Science Basis} deals with causes of climate change. This is based on a large number of scientific papers.
+ \item \emph{Adaptation and Vulnerability} is devoted to the effects of the expected climate change. Billions of people will have to deal with water shortage and/or flooding. Species of plants and animals will exterminate.
+ \item \emph{Mitigation of Climate Change} deals with the recommendations, including:
+ \begin{itemize}
+  \item Utilize energy conservation as much as possible
+  \item Use Renewables as much as possible
+  \item Use nuclear energy to reduce CO$_2$ emissions.
+  \item Apply CO$_2$ caputre and sequestration
+ \end{itemize}
+\end{itemize}
+
+\subsection{Global Energy Assessment and IEA Roadmaps}
+According to GEA, requirements for transformation to sustainable energy supply are:
+\begin{itemize}
+ \item Larger investments in energy efficiency (mainly end-use)
+ \item Larger investments in renewable energy, as well in smart grid and super grids
+ \item Full scale development of CO$_2$ capture
+\end{itemize}
+
+\subsection{Scenarios and measures to reduce CO$_2$ emissions}
+
+In order to limit the rise of the temperature to 2 to 3 degrees, the CO$_2$ concentration should be stabilized at about 450 ppm, implying that the CO$_2$ emissions should be reduced by 50\% in 2050 compared to 2005. This is extremely ambitious, implying a broad spectrum of measures is required in order to meet this goal. 
+
+\subsection{Renewables}
+Consider the following spectrum of renewable energy sources
+\begin{itemize}
+ \item Hydro power
+ \item Biomass
+ \item Wind energy
+ \item Solar energy
+ \begin{itemize}
+ \item PV systems - solar to electrical energy
+ \item CSP systems - use a large set of mirrors to heat a fluid to around 400 $^o$C. Convert to electrical energy using a generator
+ \item Solar thermal systems for water heating
+ \end{itemize}
+ \item Geothermal energy
+ \item Marine energy (tidal heads, currents, waves)
+\end{itemize}
+
+
+
+Only a small proportion of the technical potential is actually produced regarding renewable energy sources. The electrical energy produced in 2012 worldwide is equal to 22500 TWh. \bigskip
+
+
+
+
+
+\underline{Opportunities}: Renewables... 
+\begin{itemize}
+ \item have broad public support.
+ \item fit within the framework of sustainable development.
+ \item generate economical activities and economical growth.
+\end{itemize}
+\underline{Limitations}:
+\begin{itemize}
+ \item There are many different kinds of renewables, making it hard to decide which one needs development and/or implementation.
+ \item Renewables are often characterized by low energy density, implying that large systems are needed.
+ \item Often a number of conversion steps is needed.
+ \item Often a large number of systems is required e.g. PV systems on individual houses.
+ \item The generated power fluctuates.
+ \item A number of renewables is rather early in stage of development, making them expensive.
+\end{itemize}
+
+\begin{table}[ht] \centering
+ \begin{tabular}{r|l}
+  Fossil fuel & 68\% \\
+  Nuclear & 11\% \\
+  Hydro power & 16\% \\
+  Other renewables & 5\% 
+ \end{tabular}
+\caption{Electrical energy production distribution in 2012.}
+\end{table}
+
+\subsection{Outlook}
+The contribution of renewables will continue to grow, especially the new renewables. The potential is to cover the world energy demand completely, but this will take at least several decades. It is mainly a political decision to really change the share of renewables. The choice of a specific mix of renewables depends on:
+\begin{itemize}
+ \item the local circumstances (availability of wind, geothermal heat, etc)
+ \item development status (technical maturity) of the specific renewable
+ \item the long term perspective of that renewable.
+\end{itemize}
+
+The energy scenario depends on three main key factors:
+\begin{itemize}
+ \item \textbf{Population development}: the number of people consuming energy or using energy services.
+ \item \textbf{Economic development}: for which Gross Domestic Product (GDP) is the most commonly used indicator. In general, an increase in GDP triggers an increase in energy demand.
+ \item \textbf{Energy intensity}: how much energy is required to produce a unit of GDP
+\end{itemize}
+
+
+
+\section{Renewables \& the built environment}
+Currently, about 40\% of the global energy consumption relates to the built environment. 
+
+\subsection{BESELF}
+The key values for the design of buildings is given in BESELF.
+\begin{itemize}
+ \item \textbf{Basic Value}. Basic needs to feel at ease (thermal comfort, sufficient light, clean air, etc)
+ \item \textbf{Ecological Value}. Expresses the building in relation to the environment. The construction materials should be renewable etc.
+ \item \textbf{Strategic Value}. This considers the future value and use of a building. Future possible adaptions are to be considered, for when the original function becomes obsolete. 
+ \item \textbf{Economic Value}. Get good value for money, quality materials etc.
+ \item \textbf{Local Value}. How does the building look, how does it fit in the environment?
+ \item \textbf{Functional Value}. There are two main functions; housing or utility. Both can be subdivided into several categories. 
+\end{itemize}
+
+\subsection{Self sufficient built environment}
+In The Netherlands, the global strategy is named 'The Trias Energetica':
+\begin{enumerate}
+ \item \textbf{Saving energy}, reducing the need for energy. Increase insulation.
+ \item \textbf{Renewable energy}, use only energy that is renewable.
+ \item \textbf{Energy efficiency}, efficient use of fossil fuels and/or renewable sources.
+\end{enumerate}
+
+Many houses in NL are built between 1960 and 1980, these are now due for renovation. This can be done with 'Passive house design':
+\begin{itemize}
+ \item Very well insulated and airtight building envelope
+ \item Heat recovery of the ventilation air
+ \item Solar collector for hot water production
+\end{itemize}
+The improved insulation leads to a reduction in heating power and a shorted heating season, but there is a risk for overheating during the summer.
+
+\subsection{Renewables for use in buildings}
+Part of the energy consumption of buildings consists of the operation of the building itself: heating, ventilation, air conditioning (HVAC). Another share comes from consumption due to the inhabitants (internal load), implying machines etc. Typical time patterns that effect the load of the HVAC systems are:
+\begin{itemize}
+ \item \textbf{Seasonal variations}. This is different for each country. 
+ \item \textbf{Diurnal} (Day night cycle). 
+\end{itemize}
+
+An efficient way of providing multiple houses with heat, is through a central heat pump. The distribution network can have several different layouts. 
+
+
+\section{Thermal energy storage}
+
+\subsection{Why heat storage?}
+Heat storage can be applied whenever there is a mismatch in time and/or power between thermal supply and thermal demand. Two types of heat storage strategies can be distinguished, although often systems are combination of the two:
+\begin{itemize}
+ \item \textbf{Full storage}: full mismatch between supply and demand, for instance ice-making at night for AC during daytime or seasonal solar heat storage.
+ \item \textbf{Partial storage}: peak shaving, power at peak demand is provided by both storage and heating/cooling.
+\end{itemize}
+
+\subsection{Different types of thermal energy storage}
+\newcommand{\vb}{\vspace{-0.5cm} \begin{itemize}[noitemsep, leftmargin=0.5cm]}
+\newcommand{\ve}{\end{itemize} \vspace{-0.6cm} \ }
+
+Heat storage can be subdivided into three different categories:
+\begin{itemize}
+ \item \textbf{Sensible heat}, increasing temperature of an object. (Water, rock, borehole) 
+ \item \textbf{Latent heat}, melting the object. PCM is short for Phase Change Material. Anorganic PCMs have higher energy density than organic PCMs (Ice, PCMs) 
+ \item \textbf{Sorption heat}, chemical heat
+\end{itemize}
+
+% \hbadness=10000
+\begin{table}[ht] \centering
+ \begin{tabularx}{0.95\linewidth}{r XX}
+  & Advantages & Disadvantages \\ \hline
+  Sensible & \vb \item Low cost \item Little degradation \ve  & \vb \item Low to moderate energy storage density \item Heat loss \ve \\
+  Latent   & \vb \item High energy density in a small temperature interval (around melting point) \ve & \vb \item Heat loss \item Degradation \item Flammability (in case of organic PCMs) \item More expensive than sensible heat storage \ve \\
+  Soption  & \vb \item Highest energy density \item Loss free storage of heat \ve & \vb \item Degradation \item Volume change due to absorption/ desorption \item Complexity (two component system)  \ve \\ \hline
+ \end{tabularx}
+\caption{Pros and cons of sensible, latent and sorption heat storage.}
+\end{table}
+
+% \hbadness=0
+
+The advantages and disadvantages of heat storage in liquids, solids and ground are depicted in the following table.
+
+
+\begin{table}[ht] \centering
+ \begin{tabularx}{0.95\linewidth}{r XX} 
+ & Advantages & Disadvantages \\ \hline
+ Liquids & \vb  \item Good heat transfer \ve&  \vb \item Boiling, freezing \ve \\ 
+ Solids & \vb \item High temperature range \ve &  \vb  \item Low heat transfer \ve \\ 
+ Ground & \vb \item Very low cost storage material \ve &  \vb \item Low heat transfer \item limited temperature range \item large systems \item suitability depends on the ground characteristics \ve \\ \hline
+ \end{tabularx}
+\caption{Pros and cons of heat storage in liquids, solids and ground.}
+\end{table}
+\subsubsection{Sensible heat storage}
+
+The energy content of the storage with a homogeneous temperature and constant density and thermal capacity is given by 
+\begin{align}
+ Q &= \rho C_p (T - T_0)V
+\intertext{With $C_p$ given in $J/kg/K$. The energy balance is given by}
+ V C_p \rho \frac{\partial T}{\partial t} &= \sum q_{in} - \sum q_{out}
+\end{align}
+With q the thermal power in Watt.
+
+\subsubsection{Phase change heat storage}
+In these materials, a large amount of heat can be stored in a small temperature range around the melting- or evaporation temperature. In Phase Change Materials (PCM), the heat is normally stored in its melting. For the temperature range below 60$^o$C, three types of PCMs can be distinguished:
+\begin{enumerate}
+ \item Organic PCMs (organic acids and paraffins), $q_{melt} = $ 250 kJ/kg. Thermal conductivity is only $k = 0.2$ W/mk, but organic PCMs have high stability.
+ \item Anorganic PCMs (salt hydrates), $q_{melt} = 300 $ kJ/kg, but high density so anorganic PCMs has the highest volumetric heat storage capacity (2$\times$ higher than organic PCMs). Thermal conductivity $k = 0.6$ W/mK.
+ \item Ice, $q_{melt} = $ 330 kJ/kg, $k = 2.25$ W/mK.
+\end{enumerate}
+Energy content of storage is given by
+\begin{align}
+ Q = (\rho C_p)_{liquid} (T-T_m) V + q_{melt} \rho V + (\rho C_p)_{solid} (T_m - T_0)V
+\end{align}
+Water has a higher $c_p$ value than almost all PCMs, so if a large temperature interval is considered, water is a more suitable solution.
+
+\subsubsection{Sorption heat storage}
+Heat is stored by means of a chemical reaction, usually of the form
+\begin{align}
+ A_{solid} + B_{gas} &\rightarrow AB_{solid} + Q_{heat} \hspace{1cm} \forall \ T<T_{eq} \ \ \ \text{exothermal}\\
+ AB_{solid} + Q_{heat} &\rightarrow A_{solid} + B_{gas} \hspace{1.4cm} \forall \ T>T_{eq} \ \ \ \text{endothermal}
+\end{align}
+Heating up a thermochemical material (TMC) to a temperature above its equilibrium temperature, the composite material AB is separated into its components. Sorption materials can be distinguished into
+\begin{itemize}
+ \item \textbf{Chemisorption materials}, reactions such as hydration/dehydration of solid salt hydrates cause discrete steps in the molecular structure of the crystal. This is due to different binding energies
+ \item \textbf{Physisorption materials}, vapor is absorbed continuously.
+\end{itemize}
+Consider the following sorption heat storage types. Also study figure 12 lecture notes.
+\begin{itemize}
+ \item \textbf{Open system}, sorbate taken from the ambient using a fan.
+ \item \textbf{Closed system}, sorbate evaporated within the system (this also allows for other liquids as sorbate such as ammonia or methanol).
+\end{itemize}
+
+
+\subsection{Storage charging and discharging}
+
+\subsubsection{Storage in liquids}
+A pipe, with liquid flowing through and an entrance with temperature $T_{in}$ and exit temperature of $T_{out}$, has the following heat transfer (Watt).
+\begin{align}
+ \dot{q}_{discharge} = \dot{m} C_p (T_{out} - T_{in})
+\end{align}
+Liquid has the important advantage that convection occurs, substantially increasing the heat transfer. Convection is indicated with the Nusselt number $Nu$, defined as the ratio between heat transfer based on convection (moving fluid) and the heat transfer based on conduction (stagnant fluid). \bigskip
+
+Given a storage vessel with energy balance $\partial Q/ \partial t = - \dot{q}_{loss} - \dot{q}_{discharge} + \dot{q}_{charge}$, this can be rewritten as
+\begin{align}
+ \underbrace{MC_p \frac{dT}{dt}}_{\text{Energy in vessel}} &= \underbrace{-UA(T-T_a)}_{\text{heat loss}} \underbrace{-\dot{m} C_p (T - T_a)}_{\text{discharge}}
+ \intertext{The solution can be obtained as follows}
+ \frac{1}{T-T_a}\frac{dT}{dt} &= -\frac{UA- \dot{m}C_p}{MC_p}  
+ \intertext{Multiply both left and right with $dt$ and integrate over the domain, this results in two expressions for heat}
+ \int \frac{1}{T-T_a} dT &= - \int \frac{UA- \dot{m}C_p}{MC_p} dt \\
+ ln(T-T_a) + C_1 &= - \frac{UA- \dot{m}C_p}{MC_p} t + C_2
+ \intertext{The integration constants can be obtained by stating that the initial heat $Q=0$ at $t=0$, so}
+ ln(T_0-T_a) + C_1 &= 0  \rightarrow  C_1 = -ln(T_0-T_a) \ \ ; \ \  C_2 = 0  
+ \intertext{Substitution leads to the solution}
+ T &= T_a + (T_0 - T_a) \text{exp}[-t(UA+\dot{m} C_p) / M C_p]
+\end{align}
+Note that this solution is for a perfectly mixed tank with homogeneous temperature, in reality, stratification occurs (implying the bottom of the vessel is cooler than the top of vessel).
+
+\subsubsection{Storage in solids}
+Here, heat resistance is often dominated by thermal diffusion, indicated with coefficient $\alpha$. 
+\begin{align} 
+ C_p \rho \frac{\partial T}{\partial t} &= k \frac{\partial^2 T}{\partial x^2} \rightarrow \frac{\partial T}{\partial t} = \frac{k}{C_p \rho} \frac{\partial^2 T}{\partial x^2} = \alpha \frac{\partial^2 T}{\partial x^2}
+\end{align}
+
+Biot number represents the ratio between the convective heat transfer from the solid and the diffusive heat transfer within the solid
+\begin{align}
+Bi = h \frac{r}{k} 
+\end{align}
+with $h$ the convective heat transfer coefficient and $k$ is the conductive heat transfer coefficient and $r$ the characteristic length. \bigskip
+
+In case a solid is in contact with a flow, and the contact surface is of the flow temperature, the temperature distribution in the solid is calculated with
+\begin{align}
+ \frac{T(t,x) - T_\infty}{T_0 - T_\infty} &= erf\left[ \frac{x}{\sqrt{4\alpha t}} \right]
+\intertext{The error function is $erf(x) \approx x$ for $x$ is small, and $erf(x) \approx 1$ for $x>2$. The extracted power is calculated with}
+q &= k \frac{\partial T}{\partial x}\big|_{x=0} \\
+&= \frac{2k}{\sqrt{4 \alpha t \pi}} (T_0 - T_\infty) exp\left[ - \frac{x^2}{4\alpha t} \right] \big|_{x=0} \\
+&= \frac{2k}{\sqrt{4 \alpha t \pi}} (T_0 - T_\infty) \\
+&= \sqrt{\frac{k \rho C_p}{\pi t}} (T_0 - T_\infty)
+\end{align}
+
+\subsubsection{Storage in PCM}
+The solidification front through the molten PCM is defined by the following equation
+\begin{align}
+ q &= \rho \Delta H \frac{\partial s(t)}{\partial t} = \frac{\lambda (T_{ph} - T_{unload})}{s(t)}
+\intertext{Where $\Delta H$ equals the melting energy in J/kg, $\lambda$ is the conductivity in W/m/k and $s$ is the distance between the heat sink and the solidification front. This is solved by}
+s(t) \frac{\partial s(t)}{\partial t} &= \frac{\lambda (T_{ph} - T_{unload})}{\rho \Delta H} \\
+s(t) \ \partial s(t) &= \frac{\lambda (T_{ph} - T_{unload})}{\rho \Delta H} \partial t
+\intertext{Integration on both sides}
+\int s(t) \ \partial s(t) &= \int \frac{\lambda (T_{ph} - T_{unload})}{\rho \Delta H} \partial t \\
+\frac{1}{2} s(t)^2 &= \frac{\lambda (T_{ph} - T_{unload})}{\rho \Delta H} t \\
+s(t) &= \sqrt{\frac{2\lambda (T_{ph} - T_{unload})}{\rho \Delta H} t}
+ \end{align}
+
+\subsection{Applications for heat storage in liquids}
+
+\subsubsection{Domestic solar hot water systems}
+
+\begin{itemize}
+\item 3-5 m$^2$ solar thermal collector
+\item 100-200 l water storage vessel (enough for 1 day)
+\begin{itemize}
+ \item At the bottom, there is an inflow of cold tap water. 
+ \item At the top, there is an outflow of hot water for domestic usage (shower etc)
+ \item At the bottom, near the cold inflow there is a heat exchanger to provide heat from the solar collector (at the bottom, for maximum efficiency)
+ \item At the top, near the outflow, there is a heat exchanger to provide additional heat from the auxiliary (=hulp in Dutch) heater (AH), in case needed. This has to be at least 60$^o$C because of legionella regulations.
+\end{itemize}
+\end{itemize}
+\subsubsection{Domestic solar combi systems}
+
+\begin{itemize}
+ \item 4-12 m$^2$ solar thermal collector
+ \item 240-1000 l water storage vessel, stratification is an important issue in these kinds of volumes. 
+ \begin{itemize}
+ \item Stratifiers are used, inserting water at the level of its own temperature.
+ \item Hot tap water and water for space heating may not be mixed. The tap water is often heated with an external heat exchanger that uses forced convection, this provides much larger heat exchange than with natural convection.
+ \end{itemize}
+\end{itemize}
+
+\subsubsection{Aquifer heat storage}
+Here, thermal energy is stored in ground water in aquifers. An aquifer is a water permeable layers (such as sand) from which ground water can easily be extracted and or reinserted. The technique is suitable for large scale seasonal heat and cold storage. Hot and cold are stored in separate wells. 
+
+\subsubsection{Seasonal water tank and gravel pit storage}
+This is basically the same as the aquifer heat storage, but artificial.  The system is designed as a large water tank or gravel pit filled up with water. They have typically large volumes ($\sim$12.000 m$^2$).
+
+\subsubsection{Steam storage systems}
+The system consists of a large storage vessel, containing both liquid water and steam under high pressure. 
+\begin{itemize}
+ \item If part of the steam is extracted from the vessel part of the liquid will evaporate until equilibrium is reached again. The evaporation causes the temperature of the storage to drop.
+ \item If the vessel is charged, steam is blown from the boiler, into the vessel. The steam will then condense until equilibrium is reached again, heating up the storage.
+\end{itemize}
+Consider a steam storage with 30 tons of liquid water (and no steam) at 15 bar. The storage is discharged at a rate of 10 tons of steam/hour ($\approx$ 167 kg/s) until a pressure of 10 bar is reached. \bigskip
+
+From the graph (in the lecture notes) it can be seen that 15 bar is 200 $^o$C and 10 bar is 180 $^o$C, which implies an energy content of $MC_p \Delta T \approx 30.000*4300*20 \approx 2.6$ GJ. The evaporation energy of steam is about 2000 kJ/kg, so 1290 kg of steam is released. Therefore, 10 ton/hour implies that it takes 1290/167 $\approx$ 7 minutes and 45 seconds to discharge to the required pressure.
+
+\subsubsection{Thermal oil and molten salt storage in Concentrating Solar Power (CSP) systems}
+Two types can be distinguished:
+\begin{itemize}
+ \item \textbf{Solar tower}. A large field of mirrors ('heliostats') focus solar light on a central receiver. The heat is used to generate steam that drives a turbine for electricity production. Heat storage is used to keep the electricity production at a constant level. Typical temperature: 300-600 $^o$C. A 1000 $^o$C can be obtained theoretically. 
+ \item \textbf{Parabolic trough fields}. Typical temperature: 200-300 $^o$C.
+\end{itemize}
+
+Thermal oil is used as storage and heat transport medium (up to 350 $^o$C), rock or cast iron can be added here. Molten salts can also be used as heat storage (up to 1000 $^o$C) with hot air as transport medium. The salt has to remain liquid, so the temperature has to remain above melting temperature. 
+
+\subsection{Applications for heat storage in solids}
+
+\subsubsection{Cowper heaters in blast furnaces}
+In the blast furnace process for the making of pig-iron (dutch: ruwijzer) from iron-core, temperatures of up to 1500 $^o$C are used in the furnace. The air needed for this process is preheated in so called Cowper heaters (dutch: windverhitter). \bigskip
+
+For heat storage in the Cowper heaters, checker bricks are used. Cowper bricks are heated with exhaust gasses and afterburning CO. The flow is reversed after one Cowper heater is charged and the other is discharged.
+
+\subsubsection{Rock bed storage in solar air systems}
+In contrast to liquid-carrying collector systems, also solar air collectors exist. The air is flowing through channels (not too large to obtain good heat transfer, and not too small to prevent excessive pressure drop) in for instance a thick floor or a rock bed. The flow is reversed if the storage is discharged.
+
+\subsubsection{Seasonal ground heat storage by boreholes}
+Similar to rock bed storage, but with boreholes (order of magnitude required $\sim$ kilometers). Often combined with a water vessel to cover peak demand since extraction power is limited.
+
+\subsection{Latent heat storage in cooling systems}
+For large utility buildings, cooling demand can be high and with strong peaks on sunny days. Cooling storage can be economical because for instance electricity is cheaper at night and the cooling capacity doesn't have to be very high. Possible storage options are
+\begin{itemize}
+ \item \textbf{Ice} (this does require a huge heat exchange area for sufficient discharge capacity), with water/glycol mixture as cold transport fluid.
+ \item \textbf{PCMs} this has a higher melting temperature, increasing the efficiency of the chiller.
+ \item \textbf{Encapsulated ice or PCM balls} this has a high heat transfer area. This looks very similar to the rock bed solution.
+ \item \textbf{PCM slurry system} small spheres of microencapsulated PCM or ice crystals are embedded and pumped through the system. Typically 20-30\% PCM, this has a high heat exchange area.
+\end{itemize}
+
+\subsection{New developments in heat storage}
+\subsubsection{Heat storage for ACAES systems}
+Compressed Air Energy Storage (CAES) is used to store electrical energy. The electrical energy powers a compressor that stores air in an underground cavern (40 bar). When discharged, the air is used to power a turbine. However, when air is compressed, the temperature rises as well. This is why the air is cooled down during the storage process. On discharge, the air temperature is strongly reduced. Fossil fuels are used to reheat the expanded air. \bigskip
+
+Adiabatic CAES (ACEAS) uses additional heat storage to store the eat generated by adiabatic compression.
+
+\subsubsection{Ceramic heat storage in high temperature CSP towers}
+Self-explanatory.
+
+\subsubsection{Phase change for passive temperature control of buildings}
+PCM materials are integrated in the walls with a melting temperature of 25 $^o$C. This prevents overheating of the building. The method is especially effective if the PCM is able to solidify during night time, so night time cooling of the PCM is critical.
+
+\subsubsection{Phase change seasonal storages}
+Many PCMs have subcooling; the PCM has to be cooled substantially below its melting temperature before solidification starts. The PCM sodium acetate has huge subcooling, allowing to melt the material 58 $^o$C and cool it down to ambient temperature while maintaining its molten state. When heat is needed, it can be triggered into solidifying, releasing melting heat again. Currently, research is focused on finding a reliable triggering mechanism. Also, once the solidification process has started on a specific batch, it cannot be controlled anymore.
+
+\subsubsection{Thermochemical systems}
+All thermochemical storage systems are still in the R\&D phase. Salt hydrates have a higher potential energy storage density than adsorption materials like silicagel and zeolite. In addition, salt hydrates are cheaper. 
+
+
+\section{Photovoltaic Conversion}
+\subsection{Introduction}
+Photovoltaic (PV) conversion is the direct conversion of (sun)light into electricity by means of solar cells.
+
+\subsection{Solar cells}
+\subsubsection{Light}
+Light can be regarded as a flow of quasi particles, called photons. Photons have an energy ($E_{ph}$) and a momentum ($p_{ph}$), they don't have rest mass ($m_{0ph} = 0$).
+\begin{align}
+ E_{ph} &= hv = \frac{hc}{\lambda} \\
+ p_{ph} &= \frac{E_{ph}}{c}  
+\end{align}
+with $h$ the Planck constant, $v$ the frequency of light, $c$ the velocity of light, $\lambda$ the wavelength of light.
+
+\subsubsection{Semiconductors}
+
+Pure single crystalline silicon has very little conduction at room temperature due to the fact that the valence electrons (electrons that can participate in the formation of a chemical bond) of the silicon atoms (4 per atom) are part of the covalent bounds, existing between the silicon atoms in the crystal lattice. \bigskip
+
+The valence electrons occupy energy levels, constituting a fully occupied energy band, the valence band. At a distance of 1.1 eV above the valence band, there is a second band with allowed energy states, the conduction band. The zone between these bands is called the forbidden gap or band gap.
+
+\begin{enumerate}
+ \item \textbf{Intrinsic silicon}. At room temperature, electrons can jump over to the conduction band. These electrons give rise to conduction (- charge carriers). The remaining open spots in the valence band contribute to conduction as well (+ charge carriers). Both contribute to conduction, but it is very low at room temperature.
+ \item \textbf{N-type and p-type silicon} A small number of additional atoms can bring an almost equal number of electrons in the conduction band and enhance the conductivity drastically.
+ \begin{itemize}
+  \item \textbf{Phosphorus atoms} are called donor-atoms or \emph{donors}. At room temperature almost all phosphorus atoms are ionized. The silicon enriched with phosphorus atoms is called \emph{n-type} (negative) silicon, because the conductivity is mainly provided by electrons. In n-type silicon, the electrons are called majority carriers and the holes minority carriers.
+  \item \textbf{Boron atoms} give rise to conduction by holes, called \emph{acceptors}. The silicon enriched with boron atoms is called \emph{p-type} (positive) silicon, because the conductivity is mainly provided by the holes. In p-type silicon, the holes are the majority carriers and the electrons the minority carriers.
+ \end{itemize}
+\end{enumerate}
+
+\subsubsection{The p-n junction}
+
+The p- and n- type area are being separated by a very sharp boundary because of the difference in chemical potential. This results in a large potential jump of about 0.5 V at the boundary over a short distance ($\sim 1 \mu$m). \bigskip
+
+If a voltage is applied in the so-called forward direction, the current strongly increases with increasing voltage. In reverse direction, only a limited current is flowing. A semiconductor device consisting of a p-n junction is called a diode. 
+
+\subsubsection{Structure and working of a crystalline silicon solar cell}
+The solar cell consists of a 156 $\times$ 156 $\times$ 0.2 mm silicon plate (wafer), consisting of an n-type and p-type area and a junction in between. At both the top and bottom there is a metal grid, and the top has an Anti-Reflective (AR) coating. The working principle is as follows:
+\begin{itemize}
+ \item Light falls on the solar cell.
+ \item Photons with an energy higher than the band gap are absorbed.
+ \item The electron is transferred from the valence band to the conduction band, leaving a hole behind (e.g. an electron-hole pair).
+ \item If the pair is generated near the junction, the electron and the hole will be separated by the strong electric field. Else, the electron can reach the junction by diffusion.
+ \item Electrons are collected by the contact grid and reach the back via an external load.
+\end{itemize}
+
+Photons with energy $hv < \Delta E_g$ are not able to generate an electron-hole pair, resulting in energy loss (at least 33\%). Photons with energy $hv >> \Delta E_g$ result in energy loss as well (at least 23\%). This loss results into heat. At least 12\% loss occurs due to recombination of the electron-hole pair. This implies that the maximum theoretical efficiency is 32\%. Typical efficiency is 5-23\%.
+
+\subsubsection{Current-voltage characteristics of a solar cell}
+
+The current-voltage characteristics can be described as
+\begin{align}
+ I &= I_{ph} - \underbrace{I_s \left( e^{\left(\frac{qV}{kT}\right)} - 1 \right)}_{I_{diode}}
+\intertext{If the resistor is zero, the full photocurrent $I_{ph}$ will flow through the external circuit. In this case, the short circuit current is $I_{sc} = I_{ph}$. If the resistor is infinite, the full photocurrent will flow through the resistor, resulting in open circuit $V_{oc}$ ($I=0$)}
+V_{oc} &= \frac{kT}{q} ln \left(1 + \frac{I_{ph}}{I_s} \right)
+\intertext{The fill factor is defined as}
+FF &= \frac{I_{mp} V_{mp}}{I_{sc} V_{oc}}
+\intertext{Where voltage at maximum power $V_{mp} \approx 0.5$ V (for silicon solar cells). The efficiency is defined as}
+\eta &= \frac{I_{mp} V_{mp}}{I_0}
+\end{align}
+with $I_0$ the irradiance falling onto the solar cell. 
+\subsubsection{Different types of solar cells}
+\begin{itemize}
+ \item \textbf{Crystalline silicon solar cells}. Rather large thickness (160-200 $\mu$m).
+ \begin{itemize}
+  \item \textbf{Single crystalline silicon solar cells}. Initially for space industry. Industrial efficiency 16-22\% at present.
+  \item \textbf{Multicrystalline silicon solar cells}. Much cheaper than single crystalline silicon, Industrial efficiency 15-18\%.
+ \end{itemize}
+ \item \textbf{Thin-film solar cells}. Very thin due to very high absorption coefficient for sunlight (few microns).
+ \begin{itemize}
+  \item \textbf{Amorphous silicon solar cells}. Production takes little energy and material. Suitable for tandem structures (multiple junctions). Industrial efficiency 6-9\%.
+  \item \textbf{Cadmium telluride solar cells}. Relatively simple production process. This type is the heapest per Wattpeak. Industrial efficiency 13-14\%. 
+  \item \textbf{Copper-indium-gallium-diselenide solar (CIGS) cells}. Highest thin film cell efficiency but slightly more complex production. Industrial efficiency about 14\%.
+ \end{itemize}
+ \item \textbf{Dye sensitized and plastic solar cells} 
+ \begin{itemize}
+  \item \textbf{Dye sensitized solar cells}. Only used for niche applications. 
+  \item \textbf{Plastic solar cells}. Made of polymers. Relatively early state of development. Industrial efficiency around 3-4\%.
+ \end{itemize}
+ \item \textbf{Solar cells based on III-V compounds}. Band gap can be varied over a wide range. Tandem and hetero structures are possible. Very expensive, limited to space applications. Efficiency $\sim$ 40\%.
+\end{itemize}
+
+\subsection{PV Modules}
+Voltage of crystalline silicon solar cell is $V_{mp} \approx 0.5$ V. Typically, voltages of 12,24 or 48 V are needed for most applications. For historical reasons, 36 cells ($\approx 18$ V at standard test conditions AM 1.5, where AM means Air Mass and 1.5 is the ratio between length of the light path through the atmosphere and the thickness of the atmosphere) in series are often found in PV systems. Power delivered at the maximum power point, is expressed in Watt peak (Wp). \bigskip
+
+A PV module with 36 10$\times$10 cm cells, each having an efficiency of 13\% has a peak power of 36 $\times$ 1.3 Wp = 47 Wp because every cell delivers 1.3 W at 1000 W/m$^2$. The maximum power point drops with increasing cell temperature.
+
+
+\subsection{Autonomous PV systems}
+\subsubsection{Autonomous PV systems without and with battery storage}
+Autonomous PV systems are PV systems that can produce electricity independently of other energy generation systems. Variations with and without battery exist. When no battery is present, the PV system is coupled directly with the consumer, so electrical energy is only available when there is sunlight. However, in most PV systems a battery is present.
+
+\subsubsection{Autonomous PV systems with battery storage}
+An autonomous PV system with battery storage consists (in principle) of one or several PV modules, battery storage and a consumer load. Sometimes, the battery also has an overcharge protection device and deep-discharge protection. The PV module charges the battery via a diode to ensure that the battery cannot discharge itself via the PV at night.
+
+\subsubsection{The components in an autonomous PV system}
+
+% \renewcommand{\theenumi}{\alph{enumi}}
+\begin{enumerate}[label=\alph*.]
+ \item \textbf{The PV modules}. One or more PV modules are present.
+ \item \textbf{The support construction}. Necessary in order to give the PV modules a certain tilt angle, must be able to withstand wind/snow forces.
+ \item \textbf{Battery storage}. Mainly lead sulfuric acid batteries are used. Extreme conditions:
+ \begin{itemize}
+  \item Charged an discharged daily.
+  \item Often not fully charged.
+  \item Exposed to high ambient temperatures.
+ \end{itemize}
+ Important aspects:
+ \begin{itemize}
+  \item Storage capacity.
+  \item Energy storage efficiency.
+  \item Cyclic life time.
+ \end{itemize}
+ \item \textbf{The controller}. Protect battery against overcharge and too deep discharge. 
+ \item \textbf{Cabling}. Typically low voltages, so cable resistance need to be kept low.
+ \item \textbf{The appliance}. The load should have a high efficiency so the PV system doesn't have to be excessively large.
+\end{enumerate}
+
+\subsubsection{Important issues in designing autonomous PV systems}
+\begin{enumerate}
+ \item Knowledge of the load pattern.
+ \item Knowledge of the irradiation and its variations. 1-5 kWh/m$^2$ in NL.
+ \item Required reliability level of the energy supply. 
+ \item Selection of the array size.
+ \item Tilt angle of the array. (30$^o$ in summer, 60-70$^o$ in winter)
+\end{enumerate}
+
+\subsubsection{Starting points for the system sizing of autonomous PV systems}
+Calculate the ratio between energy generated to the energy demand. Peaks can be smeared out using a battery, although typical storage efficiency is around 75-80\%. The system is usually optimized for lowest cost. 
+
+\subsubsection{Typical applications of autonomous PV systems}
+PV systems are typically applied when:
+\begin{itemize}
+ \item Only small amount of electrical energy required.
+ \item No public grid available or where grid connection is too expensive.
+\end{itemize}
+
+\subsection{Grid-connected PV systems}
+\subsubsection{Introduction}
+A grid-connected PV system consists of an array of PV modules, a DC (direct current) coupling box, an inverter and a connection to the grid. The PV modules are connected in a number of series connections, these connections are then connected parallel in the DC-coupling box. Then, the inverter converts the direct current into an alternating current. This can can be fed to the public grid at grid voltage level. 
+
+\subsubsection{Basic structures}
+Three different types of systems are connected to the grid:
+\begin{enumerate}[label=\alph*.]
+ \item \textbf{Systems with a DC-coupling box}. Strings are connected in parallel, the box also contains separators, fuses, overvoltage protection and a DC switch in the outgoing line to the inverter. Each string may also contain a diode to prevent feedback if part of the PV is in the shade.
+ \item \textbf{Systems with a string-inverter}. No DC-coupling box present. Array consists of 1 or 2 strings. This type is most common.
+ \item \textbf{Systems assembled for AC-modules} (alternating current). Here each module has its own inverter, these inverters are then all connected with an AC-coupling box. Good system efficiency. 
+\end{enumerate}
+
+\subsubsection{PV inverters}
+PV inverters convert DC (direct current) into AC (alternating current), composed of modern solid-state devices. Efficiency is mostly determined by the principle the inverter is based on and the semiconductor elements used. Efficiency is low for low power due to power consumption of the inverter itself, efficiency is also low for too high power due to ohmic losses. Typical efficiency is around 95-96\%.
+
+\subsubsection{Locations for installation}
+Locations:
+\begin{itemize}
+ \item Flat roof
+ \item Above or integrated into sloped roofs
+ \item Facades or shading elements
+ \item Free standing in the field
+ \item In sound barriers
+\end{itemize}
+
+\subsubsection{Energy yield}
+The energy yield of a grid-connected PV system is calculated as:
+\begin{align}
+ E_{fi} &= A_{cell}\ H_{i,u}\ \eta_{syst}
+ \intertext{With $E_{fi}$ the AC energy supplied by the PV inverter, $A_{cell}$ the total cell area, $H_{i,u}$ the irradiation in plane of the array and $\eta_{syst}$ the overall system efficiency. The performance ratio $PR$ is defined as (at least remember the last expression)}
+ PR &= \frac{E_{fi}\ G_{stc}}{H_{i,u}\ P_{stc}} = \frac{\eta_{syst}}{\eta_{cell,STC}}
+\end{align}
+With $P_{stc}$ the power at STC (standard test conditions) and $G_{stc}$ the normalization constant at STG (=1000W/m$^2$). The most important system losses area
+\begin{itemize}
+ \item Inverter losses. (6.5\%)
+ \item Losses due to $T_{cell} \neq 25 ^o$C, called temperature loss. (4\%)
+ \item Losses due to irradiance on cell $\neq 1000$ W/m$^2$, called low irradiance loss (5\%)
+ \item Ohmic losses in cabling (1\%)
+ \item Others (3\%)
+\end{itemize}
+Resulting in PR = 0.82. The specific energy yield
+\begin{align}
+ Y_f = \frac{E_{fi}}{P_{stc}} = \frac{PR\ H_{i,u}}{1000 W/m^2}
+\end{align}
+expressed in [kWh/kWp/year].
+
+
+
+
+\subsubsection{Specific energy yield in the Netherlands}
+Irradiation in the horizontal plane in NL is 1019 kWh/m$^2$/year, so $H_{i,u} = 1105$ kWh/m$^2$/year in plane. This gives specific energy yield of $Y_f$ = 905 kWh/kWp/year.
+
+\subsubsection{Estimate of kWh cost}
+Assume 1600 euro/kWp (tax included), and assume 905 kWh/kWp/year and a total yearly cost (depreciation + interest + maintenance) is 8.5\% of the total investment is 136 euro/kWp/year. 136/905 = 0.15 euro/kWh. Compare this to 0.22 euro/kWh on the public grid.
+
+\subsection{Concluding remarks}
+The market development of PV systems is increasing rapidly, but currently below 1\% of the total electrical energy production. The cost of electrical energy generation is decreasing, and is approaching grid-parity (PV electricity is as expensive as retail tariff on the public grid). R\&D will decrease production cost and increase efficiency. Furthermore, studies show that the production and dismantlement of crystalline silicon and thin film PV modules can be carried out rather clean. The typical pay-back time in NL of crystalline silicon PV modules is about 2.5 year, thin film modules about 1.5 year. This will further decrease over time. 
+
+
+\section{Solar Collectors}
+\subsection{Introduction}
+20-30\% of the primary energy consumption in NL is used for heating. A solar thermal system is active if it contains control elements to match supply and demand as much as possible.
+
+\begin{table}[ht] \centering
+\begin{tabular}{r|ll}
+ Collector type & Typical temp. ($^o$C) & Fixed/tracking \\ \hline
+ Shallow solar pond & 40 - 60 & Fixed \\
+ Deep solar pond (salt-gradient) & 40 - 90 & Fixed \\
+ Flat-plate collector & 30 - 200 & Fixed \\
+ CPC collector & 80 - 200 & Fixed/one axis \\
+ Vacuum tubes, with reflectors & 100-250 & Fixed \\
+ Cylindrical reflector & 200 & Fixed/one axis \\
+ Parabolic trough & 300 & one axis \\
+ Fresnel reflector focal line & 250 & one axis \\
+ Parabolic dish & 1500 & two axis \\
+ Central receiver, field with mirrors & 1000 & two axis
+\end{tabular}
+\caption{Collector types, along with typical temp. and DOF.}
+\end{table}
+
+\subsection{The flat-plate solar collector}
+The flat-plate collector consists of a black plate, attached to pipes in order to transport the heat using a fluid. Transparent cover(s) and casing insulate the heat inside. 
+
+
+
+
+\begin{table}[ht]
+ \centering
+ \begin{tabularx}{10cm}{rX}
+  Component & Demand \\ \hline
+  Transparent cover & \vb \item Reduce convective heat loss \item Pass solar irradiation \item Reflect infrared emission of the absorber \item Protect the absorber \ve \\
+  Absorber & \vb \item Convert solar radiation to sensible heat \item Pass the solar heat to the heat transfer fluid \ve \\
+  Casing & \vb \item Reduce heat loss to ambient \item Provide rigidity \ve
+ \end{tabularx}
+\caption{Demands of the components of a solar collector}
+\end{table}
+
+\subsubsection{Solar radiation}
+The solar irradiation just outside the earth's atmosphere is 1353 W/m$^2$ (aka the solar constant). Air passing through the earth's atmosphere is partly reflected, absorbed and diffracted (dependent on the wavelength of the light), resulting in a spectral distribution.
+
+\subsubsection{Optical efficiency}
+The optical efficiency of a solar collector is defined as the ratio between the energy that is absorbed by the collector and the energy of the incoming light. This can be written as
+\begin{align}
+ \eta_{opt} &= \frac{AI_p}{AI_0}
+\intertext{With $A$ the area of the collector, $I_p$ the intensity of the absorbed solar radiation and $I_0$ the intensity of the incoming solar radiation. Energy is never lost, so the solar energy is either absorbed ($\alpha$), reflected ($\rho$), or transferred ($\tau$) through the material; these fractions always sum up to 1.}
+ \tau &+ \alpha + \rho = 1
+\intertext{A flat plate collector with a single transparent cover with transmission $\tau$ and an absorber with absorption $\alpha$, the optical efficiency is given by}
+\eta_{opt} &\approx \frac{A \alpha \tau I_0}{A I_0} = \alpha \tau
+\end{align}
+
+
+\subsubsection{Absorber}
+Every material with a given heat, will emit radiation. The higher the temp, the smaller the wavelength. This is usually in the infrared region. Spectral selective coatings ensure that the absorber has a high coefficient of absorption at visible wavelengths and a low coefficient at the infrared region. The coefficient of emission $\varepsilon$ indicates the radiated energy related to the radiated energy of a black body of the same temperature. $\alpha$ equals $\varepsilon$ for every wavelength, so the coating greatly reduces loss of heat by radiation.
+
+
+\subsubsection{The energy balance in a solar collector}
+Energy balance:
+\begin{align}
+ \dot{Q} &= A\left( I_p - h_v(T_{p,m} - T_a) \right)
+\intertext{The collector efficiency}
+\eta &= \frac{\int \dot{Q} dt}{ A \int I_0 dt}
+\end{align}
+
+\subsubsection{Determination of the heat loss coefficient}
+
+The heat flow between two parallel plates is described as follows
+\begin{align}
+ \dot{Q}_{1,2} &= h_{1,2} (T_1 - T_2) + \frac{T_1^4 - T_2^4}{\frac{1}{\varepsilon_1} + \frac{1}{\varepsilon_2} - 1}
+\intertext{The heat removal factor is calculated as follows}
+ F_R &= \frac{\dot{m} c_p (T_{f,o} - T_{f,i})}{A \left[ I_P - h_v (T_{f,i} - T_a) \right]}
+\end{align}
+
+
+\subsubsection{Collector and heat storage}
+If the water in the solar collector is directly poured into the heat storage vessel (without a heat exchanger in between), the system is called a direct system. If there is a coupling in between (by means of a heat exchanger), the system is called an indirect system.
+
+
+\subsubsection{Efficiency}
+In order to compare several solar collector systems, the efficiency is given as a function of the reduced temperature. 
+\begin{align}
+ T^* = (T_i - T_a)/I_0
+\end{align}
+With $T_a$ the ambient temperature. 
+
+\subsubsection{Collector stagnation}
+The stagnation temperature in the panel occurs when the temperature in the vessel is at its maximum temperature and no more heat can be withdrawn from the collector. This temperature is time dependent, but can be 200 $^o$C. In this case, the water should be dawn off the collector and filled with air only. Systems with this technique are called \emph{drainback systems}. The same principle can also be used to prevent damage from freezing. 
+\subsection{Solar collector types}
+
+\begin{itemize}
+ \item \textbf{The Compound Parabolic Concentrating (CPC) collector}. Parabolic shaped mirrors reflect light onto a central tube, causing a high light concentration so high temperatures can be realized.
+ \item \textbf{Vacuum collector}. Basically a flat plate absorber, but placed in a pipe. This is subsequently placed in a pipe under vacuum. Transport of heat can be done using little transportation fluid, that vaporizes at hot places and condenses at the cold area. Transport from cold to hot can be done with capillary forces.
+\end{itemize}
+
+\subsection{Solar thermal systems}
+\begin{itemize}
+\item \textbf{ Solar domestic hot water system (SDHW)}.
+The annual system efficiency is around 28\%. The solar fraction (the ratio between the contributed solar energy and the total energy consumption) is around 0.4.
+
+\item \textbf{ Thermosyphon systems}.
+This is a system without pumps. The heat storage is placed above the collector so the water cycles due to buoyancy forces.
+
+\item \textbf{ Integrated collector storage systems (ICS)}.
+Colletor and heat storage are integrated into a single system. The cylindrical heat storage is enclosed in a cylindrical absorber. Cheap because only 2 pipe connections are needed.
+
+\item \textbf{ Large solar systems}.
+For multi-family/flats/industry. $\sim$100 m$^2$ solar collector and 5m$^2$. The control system is more complicated.
+
+\item \textbf{ Swimming pool collectors}. Strong Coupling between heat demand and solar energy supply for outdoor swimming pools. Low temperatures so uncovered collectors are already suitable.
+\end{itemize}
+
+\subsection{Solar thermal markets}
+In the Netherlands, an annual growth rate of 30\% is desired. The system costs is expected to decrease. 
+
+\subsection{New developments}
+Solar thermal technology is still far from a full grown technology. There is a growing interest for solar systems with temperatures of 120-200 $^o$C. More automation in the production process.
+
+
+\section{Introduction to wind energy}
+\subsection{Resources, markets and scenarios}
+Areas in North West Europe provide good to excellent wind energy resource. Wind is caused by solar energy that causes pressure differences in the air, initiated by temperature differences.
+
+\subsubsection{Energy content of the wind}
+Power of the wind is equal to
+\begin{align}
+ P_{wind} &= \frac{1}{2} \rho V^3 A
+\end{align}
+With $P_{wind}$ the power in Watt, $\rho$ the density of air $\approx 1.225 kg/m^3$, $V$ the wind speed and $A$ the horizontal "swept" surface [m$^2$]. As can be seen, the power is strongly dependent on the wind speed. 
+
+\subsubsection{The wind energy market}
+The market grows with 25\% per year and is mostly (also manufacturing) present in Europe. 
+
+\subsection{General information on wind climate}
+\subsubsection{Structure of the atmospheric boundary layer}
+At large heights ($\sim$1000m) the wind is not perpendicular to the isobars, but parallel. This is due to the Coriolis force (caused by the rotation of the earth). This wind is denoted as geostrophic wind. At lower heights, friction will lead to wind shear: a reduction of the wind magnitude and a change in the wind direction. This friction has two causes:
+\begin{itemize}
+ \item \textbf{Mechanical}: the friction of the terrain roughness (characterized by the roughness length $z_0$).
+ \item \textbf{Thermal}: stratification of the atmosphere: an unstable atmosphere will lead to mixing of air layers.
+\end{itemize}
+
+\subsubsection{Wind speed distribution in the atmospheric boundary layer}
+The mean wind speed can be calculated using a measured wind speed at a height $h_{ref}$.
+\begin{align}
+V(h) = V(h_{ref}) \left( \frac{ln(h/z_0)}{ln (h_{ref}/z_0)}\right)
+\end{align}
+Here, $z_0$ is the roughness height that typically varies between $z_0$ = 0.3 - 1.00 m (rural areas), and $z_0$ = 0.0002 m at open sea. 
+
+\subsubsection{Wind statistics}
+Causes of wind fluctuations subdivided into several time scales:
+\begin{itemize}
+ \item Seconds to minutes: 
+ \begin{itemize}
+ \item Stationary turbulence (caused by friction of the wind with the surface, wakes of obstacles, thermal instability)
+ \item Non stationary turbulence (cold fronts, hail storms, etc)
+ \end{itemize}
+ \item Hours to days:
+ \begin{itemize}
+ \item The above mentioned
+ \item Non stationary phenomena (Thermally driven daily circulations as sea breezes, mountain slope winds)
+ \end{itemize}
+ \item Days to weeks:
+ \begin{itemize}
+  \item Changes due to development and passing of large scale weather systems
+ \end{itemize}
+ \item Weeks to months:
+ \begin{itemize}
+  \item Seasonal differences related to regional and global temperature differences
+ \end{itemize}
+ \item Years:
+ \begin{itemize}
+  \item Cyclic solar activity 
+  \item El Nino" type of phenomena 
+  \item Long term trends
+  \item Global warming
+ \end{itemize}
+\end{itemize}
+
+The (continuous) probability density function of wind speed $U$ is given as (Weibull distribution)
+\begin{align}
+ f(U) &= \frac{k}{U} \left( \frac{U}{a} \right)^k e^{-(U/a)^k}
+\end{align}
+
+\subsection{Principles of aerodynamic theory}
+Almost all current design codes for wind turbine rotors are based on the Blade Element Momentum theory (BEM). This theory is simple, has modest calculation requirements and reasonably accurate. It does not predict all flow conditions with sufficient accuracy, so it has several extensions to cover these too. 
+
+\subsubsection{Blade Element Momentum theory}
+Consider a control volume of circular cross-section $A$ and a length $U\Delta t$. The mass equals $\Delta M = \rho U \Delta t A$. Conservation of mass:
+\begin{align}
+ m &= \frac{\Delta M}{\Delta t} = \rho U A 
+ \intertext{Conservation of momentum:}
+ mU &= \rho U^2 A
+ \intertext{Conservation of energy:}
+ \frac{1}{2} m U^2 &= \frac{1}{2} \rho U^3 A
+ \intertext{The thrust on the rotors is calculated as}
+ T &= \Delta p A
+ \intertext{So the extracted power equals}
+ P &= TV_1 = \Delta p A V_1
+ \intertext{With $V_1$ the velocity of the flow through the disk. The optimal situation is reached when $V_1 = \frac{2}{3} U$. The velocity at the wake of the rotor equals $\frac{1}{3}U$. From Bernoulli's law, it follows that the pressure drop $\Delta p = \frac{8}{9} \frac{1}{2} \rho U^2$. The maximum power equals}
+ P_{max} &= T \frac{2}{3} U = \frac{8}{9}\frac{1}{2} \rho U^2 A \frac{2}{3} U 
+ \intertext{The thrust and power can be made dimensionless by division by $\frac{1}{2} \rho U^2 A$ and $\frac{1}{2} \rho U^3 A$, leading to the power coefficients}
+ C_T &= \frac{T}{\frac{1}{2} \rho U^2 A} \hspace{2cm} C_p = \frac{P}{\frac{1}{2} \rho U^3 A}
+ \intertext{So the maximum power coefficient equals}
+ C_{p_{max},theory} &= \frac{16}{27} \approx 0.59
+\end{align}
+This theoretical maximum is not possible to each in practice. This is, amongst others, due to the fact that in reality rotor blades experience viscous drag while rotating + losses in the gearbox and generator. In practice, $C_p$'s close to 0.5 are realized. \bigskip
+
+Regarding the blades, the angle of attack $\alpha$ should be optimized. This is when the ratio between lift $L$ and drag $D$ has a maximum value. For optimal performance, the ratio $\lambda$ between the speed of the rotor tip and the wind speed should remain constant $\lambda = \Omega R/U$.
+
+
+\subsection{P-V curve and Power Control}
+\subsubsection{P-V curves for the two main control types}
+Older generation windturbines operate at constant rotational speed so at lower $C_p$ that maximal achievable. 
+
+\subsubsection{The limitation of excess power and higher wind speeds}
+At wind speeds above $V_{rated}$ ($\sim$ 12 m/s) are too high and power needs to be limited. Three types of power control above $V_{rated}$ are feasible:
+\begin{itemize}
+ \item \textbf{Constant $\Omega$ operation with stall control}. Both the rotational speed and pitch angle are fixed; an increase of wind speed increases the angle of attack $\alpha$. An increase in windspeed leads to significantly more drag, limiting the power. This concept is used with great success in almost all Danish turbines. 
+ \item \textbf{Constant $\Omega$ operation with assisted stall control: the stall level can be adjusted by pitch changes towards larger $\alpha$}. The level of stall can be tuned by changing pitch angle $\theta$. For increasing wind speed, the pitch angle is adjusted in the direction of the wind. 
+ \item \textbf{Constant $\lambda$ (so variable $\Omega$) with pitch-to-feather control (towards smaller $\alpha$)}. Pitch control in the direction of zero-lift (feather) diminishes the lift for increasing wind speed. The drag remains low.
+\end{itemize}
+
+\subsubsection{Power and load control below the rated wind speed}
+Only possible for turbines with pitch control to feather, usually combined with variable rotation speed. Pitch control without variable rotation speed is too slow as the time scale of turbulence is often too short. The pitch change can then be out of phase, amplifying the disturbance. 
+
+
+\subsubsection{Safety systems}
+The safety system is able to overrule the control system, not vice-versa. Most MW turbines have adopted the following system:
+\begin{itemize}
+ \item Control: collective pitch adjustment, either for assisted stall control or for pitch-to-feather control.
+ \item First safety level: collective pitch change at a high angular velocity, either to stall or to zero lift.
+ \item Second safety level: individual pitch change at a high angular velocity, either to stall or to zero lift. (in case one of the blades fails)
+\end{itemize}
+
+
+\subsubsection{Concept comparison}
+\begin{itemize}
+ \item Constant speed, stall control has the advantage of simplicity, so low turbine costs. Power control possibilities are limited, high loads. Successfully implemented by the Danish.
+ \item Variable speed, pitch control offers good control possibilities, including peak shaving of loads. More complex, expensive components (but prices are decreasing). Increasingly popular. 
+\end{itemize}
+
+
+
+\subsection{Energy production}
+From the total energy content, about 60\% is lost due to the intrinsic loss due to $C_p = 0.45-0.5$ and $\eta_{drivetrain} = 0.9-0.95$. Also the values for cut-in, cut-out and rated wind speed (above which the generator power is kept constant) are introduced. The choices for $V_{rated}$ and $V_{cut-out}$ have the highest impact on the energy production. 
+
+
+
+\section{Hydropower}
+\subsection{Introduction}
+Conditions for a hydropower potential are:
+\begin{itemize}
+ \item A continuous supply
+ \item Sufficient geodetic difference in height (head)
+ \item The water needs to flow with a reasonable velocity
+\end{itemize}
+The total installed power is 801 GW, 2610 TWh (16\% of total electricity production). 
+
+\subsection{Development of hydropower engines}
+\subsubsection{Water wheels}
+Hydropower has seen a long history. There are different kinds of water wheels, distinguished into
+\begin{itemize}
+ \item Undershot waterwheels
+ \item Breast waterwheels
+ \item Overshot waterwheels
+\end{itemize}
+Waterwheels using potential energy rotate slowly, because the velocity of the water leaving the wheel should be as low as possible (leading to bulky constructions). \bigskip
+
+The Pancelot wheel uses kinetic energy. Here, potential energy is first converted into kinetic energy, and subsequently converted into mechanical energy.
+
+\subsubsection{Water turbines}
+By converting the potential energy first into pressure by means of a simple pipe and subsequently into mechanical energy in a relatively small turbine, construction material can be used more efficiently. 
+
+\subsection{Basic equations}
+\subsubsection{Potential and kinetic energy}
+Potential energy
+\begin{align}
+ E_p &= mgZ
+ \intertext{Kinetic energy}
+ E_k &= \frac{1}{2} mc^2
+\end{align}
+
+\subsubsection{Energy, Bernoulli and momentum equations}
+A hydropower engine with inflow pressure $p_1$, velocity $c_1$ and height $Z_1$, and outflow pressure $p_2$, velocity $c_2$ and height $Z_2$, has a power supply of
+\begin{align}
+ P_{mech} = \Phi_v \left( (p_1 - p_2) + \rho g (Z_1 - Z_2) + \frac{1}{2} \rho (c_1^2 - c_2^2) \right)
+\end{align}
+The turbines considered have an efficiency approaching 90\%. Bernoulli: for a flow without friction of a non-compressible liquid holds along a stream line:
+\begin{align}
+ p + \frac{1}{2} \rho c^2 + \rho g Z = Const.
+\end{align}
+Note that the forces exerted onto a liquid element are given by the momentum equation (follows from the 2nd law of Newton). (see figure 7.5 lecture notes)
+\begin{align}
+ \Phi_m \boldsymbol{\Delta} \boldsymbol{c} = \boldsymbol{F}
+\end{align}
+
+\subsection{The Pelton turbine}
+In \emph{action, impulse or equal pressure turbines}, the entire potential energy (pressure p) is converted into kinetic energy. In \emph{reaction or over-pressure turbines}, only part of the pressure is converted into kinetic energy in the strator. The rest is converted in the rotating wheel. The Pelton turbine replaced the flat blades of an existing turbine by cup-shaped blades, splitting the incoming jet into two jets and routed over almost half an arc of a circle.
+
+\subsubsection{Momentum transfer}
+The jets of a Pelton turbine change velocity into the opposite direction, so the total change of speed amounts $2(c-u)$ (with $c$ incoming velocity, and $u$ the velocity of the blade). So the resulting force equals
+\begin{align}
+ F = 2\Phi_m (c-u)
+\end{align}
+
+\subsubsection{Power}
+The power $P$ is calculated as
+\begin{align}
+ P &= uF = 2 \Phi_m u (c-u)
+\intertext{So the highest power is achieved when $u = \frac{1}{2} c$. Under this condition, the outlet speed is equal to zero. The turbine torque is calculated as }
+ T &= \frac{1}{2}D F
+\end{align}
+
+\subsubsection{Dimensionless numbers}
+The dimensionless numbers treated here help in in answering the question "which turbine should I use for a given head, flow and desired number of revolutions and how large becomes that turbine?". \bigskip
+
+Specific diameter
+\begin{align}
+ \Delta &= D \frac{(gZ)^{1/4}}{(\Phi_v)^{1/2}}
+ \intertext{Specific angular velocity (with $\omega = (2u)/D$)}
+ \Omega &= \omega \frac{(\Phi_v)^{1/2}}{(gZ)^{3/4}}
+ \intertext{Specific flow}
+ \Phi &= \frac{\Phi_v}{D^2 (gZ)^{1/2}} =   \frac{\frac{\pi}{4} \left( \frac{D}{8} \right)^2 \sqrt{2gZ}}{D^2 (gZ)^{1/2}} 
+ \intertext{Tip-speed ratio}
+ \lambda &= \frac{u}{c} = \frac{\omega D}{2\sqrt{2gZ}}
+\end{align}
+
+
+\subsection{Other turbines}
+\begin{itemize}
+ \item \textbf{Francis turbine}. Water is supplied along the whole circumference of the rotor and the water is drained axially. Still standing guide blades cause a radial velocity at the inflow of the turbine. The outflow has no radial velocity. 
+ \item \textbf{Kaplan turbine}. Same as Francis turbine but here both the guiding blades and the running blades of the propeller are adjustable.
+ \item \textbf{Bulb (or tube) turbine}. Same as Kaplan turbine, but with the water moving through the guiding blades axially as well. Tube turbine has the generator outside the inflow channel. Bulb turbine has the inside the inflow channel.
+ \item \textbf{Banki (or cross-flow) turbine}. Very popular in developing countries, water flow right through the rotor. Simple curved shapes, easy fabrication. 
+\end{itemize}
+
+Dimensionless numbers $\Delta, \Omega, \Phi$ and $\lambda$ are usually given to relate dimensions of the generator.
+
+\subsection{Cost of hydropower}
+Cost is strongly dependent on the conditions it is being generated. Large generators are relatively cheaper (per kWh), because less civil work (dams) are required. Costs of hydropower are likely to only slightly drop in the future.
+
+\subsection{New developments}
+Conversion efficiencies are already close to 90\% and increasing efficiencies will be very expensive. Developments take place in cost reduction. Also, efficient propeller turbines are developed for small heads.
+\begin{itemize}
+\item \textbf{Low head hydro}. A tube (siphon) is positioned over the dam. The upper part of the siphon is at sub-atmospheric pressure. Air is continuously removed by the water flow. An air turbine is used to extract energy from the air flow and convert it into electrical power.
+\item \textbf{Tidal energy}. Blocking off a bay and using the height difference of the water in- and outside the bay for electricity production using bulb turbines. A water velocity of 1 m/s has about as much power as a wind velocity at 9.4 m/s, so 'windmills under water' are also being developed.
+\item \textbf{Pump accumulation}. Pump water into a reservoir during times of electrical power overproduction. Then generate power from the potential energy of the water when there is a need for power.
+\item \textbf{Wave energy}. Four categories are known: Point absorbers, line absorbers, eindabsorbers and overtopping absorbers.
+\item \textbf{Blue energy}. Generate power from salt concentration differences between fresh and sea water. In Pressure Retarded Osmosis (PRO), a semi-permeable membrane can be used to make water flow from fresh to salt, but not vice versa. This causes pressure differences, that can be used to generate electricity using a turbine. In Reversed Electro Dialysis (RED), ions (sodium and chlorine) travel through separate membranes, causing an electronic current that can be used as electrical power. 
+\end{itemize}
+
+\subsection{Worldwide hydropower potential}
+Much more hydropower can be exploited in an economically feasible way than there is currently being generated. 
+
+\subsection{Environmental effects}
+\subsubsection{Loss of space}
+Large hydropower projects can have large social and ecological consequences (people have to move, farming land is lost, military misuse, bacteria breeding in reservoirs, etc). 
+
+\subsubsection{Effect on ecology (fish migration)}
+Many fish do not survive turbines, fish friendly turbines are being developed. 
+
+
+\section{Biomass}
+
+\subsection{Introduction}
+Biomass represents 55 EJ or about 15\% of present world energy supply (dominating source in developing countries). It is mostly used inefficiently. Biomass is complex, due to wide range of feeding materials (varying compositions, and varying time/place of release). Many conversion systems are available, for a wide range of applications. Technology for many of these is not very mature.
+
+\subsection{The resource; its characteristics and its properties}
+\subsubsection{Characteristic of biomass}
+\begin{itemize}
+ \item \textbf{Climate neutral}. Only if the biomass is grown in a sustainable way. 
+ \item \textbf{Efficiencies and world production}. Sunlight is absorbed by chlorophyll.
+ \item 6CO$_2$ + 6H$_2$O (+sunlight) $\rightarrow$ C$_6$H$_{12}$O$_6$ + 6O$_2$. $\Delta$H = 2.8 MJ/mol sugar (endothermal process, as energy is needed for the conversion). Globally, about 10 times the world energy use is produced with photosynthesis. Efficiency C4 plants (such as maize, sorghum or sugar cane):
+ \begin{align*}
+  \eta =\ & 0.5 \text{ (only visible light)} \times 0.8 \text{ (reflection/transmission/absorption)} \times\\
+  & 0.28 \text{ (energy stored in plant)} \times 0.6 \text{ (consumption by plant itself)} \\
+  =\ & 6.7\%
+ \end{align*}
+ Efficiency of C3 plants is lower (95\% dominant). In practice, the eff. is even lower, due to not optimal conditions $\rightarrow$ 0.5 - 1 \% efficiency.
+ \item \textbf{Availability of land}. Most land for biomass is available from reforestation and (making better use of) existing production forests. Plants need a lot of water (300-1000 ton water / ton biomass). 
+\end{itemize}
+
+\subsubsection{Resources of biomass}
+\begin{itemize}
+ \item \textbf{Waste streams}. Total waste streams are a resource of about 25\% of the world energy use. Problems regarding conversion often have a organizational or logistic nature. 
+ \item \textbf{Energy from food crops}. Sugar cane and grain can be used for production of ethanol. 
+ \item \textbf{Energy from woody or grassy materials}. Woody and grassy materials are preferred over food crops because:
+ \begin{itemize}
+ \item Less use of fertilizers and pesticides
+ \item Other environmental aspects
+ \item Relatively less fossil fuel needed for the production chain
+ \item Less land is needed
+ \item They enlarge the importance of sustainable forestry for mankind
+ \end{itemize}
+\end{itemize}
+
+\subsubsection{Other properties of biomass}
+Wood consists of 
+\begin{itemize}
+ \item Cellulose (50\%)
+ \item Hemicellulose (25\%)
+ \item Lignin (25\%)
+\end{itemize}
+and has an average composition of C$_8$H$_{11.5}$O$_5$, but also has other nutrients and many trace elements. Fresh wood is $\sim$50\% water, and dry material is $\sim$15\% water. It has a heating value of $\sim$20 MJ/kg. The average composition of coal is roughly CH$_{0.8}$. The heating value is $\sim$28 MJ/kg. 
+
+\subsection{Conversion into heat and electricity}
+\subsubsection{Combustion}
+The overall equation of combustion of dry wood is 
+\begin{align}
+ C_8H_{11.5}O_5 + 8.37O_2 + 33.5N_2 \rightarrow 8 CO_2 + 5.75H_2O + 33.5N_2
+\end{align}
+The heat released of this exothermal process is $\Delta H_c$ = -3.770 MJ/mol C$_8$. 
+
+\subsubsection{Other conversion systems}
+\begin{itemize}
+ \item \textbf{Gasification}
+ \begin{itemize}
+ \item \textbf{Fixed bed systems}. Small-scale applications ($<5$MW). 
+ \begin{itemize}
+ \item \textbf{Downdraft gasifier}. Air and wood supplied from the top, syn-gas leaving from below. Wood is dried in the upper part, then heated and pyrolysis occurs, releasing volatiles. Volatiles is then oxidated. The gases are then reduced by the char. 
+ \item \textbf{Updraft gasifier}. Wood and air are supplied from opposite sides $\rightarrow$ oxidation and reduction zones have changed places. 
+ \end{itemize}
+ \item \textbf{Fluid bed systems}. Air is circled through a bed of wooden chips, ideally leading to a mixture of CO and H$_2$. 
+ \item \textbf{Entrained Flow systems}. Large-scale applications. Wood is blown into the reactor (T = 1000 $^o$C) in the form of very fine particles.
+ \end{itemize}
+ \item \textbf{Pyrolysis} In 300 < T < 600 C (without O$_2$) wood decomposes into oil, char and gases. This oil can be used in co-combustion.
+ \item \textbf{Torrefaction}. Heating wood $220 < T < 280$ C. Advantages:
+ \begin{itemize}
+  \item Endothermal
+  \item Anhydrous
+  \item Brittle (easily milled into powder)
+  \item Energy content of 98\% of the input wood and increased energy density of 10\%.
+ \end{itemize}
+\end{itemize}
+
+
+\subsubsection{Production of electricity}
+Wood is mostly co-combusted in a coal power plant in the form of syn-gas, torrefied wood or pyrolysis oil. 
+
+\subsubsection{Cost and environment}
+Cost is around 4 euroct/kWh.
+
+
+\subsection{Liquids and gases}
+\subsubsection{Several liquid transportation fuels}
+\begin{itemize}
+ \item \textbf{Ethanol} $C_6H_{12}O_6 \rightarrow 2C_2H_5OH + 2CO_2$ ($\Delta H =$ -172 kJ/mol sugar)
+ \item \textbf{Bio-diesel}. Obtained from rapeseed or soya beans. 
+ \item \textbf{Pyrolysis oil}. 
+ \item \textbf{HTU oil}. Hydro Thermal Upgrading (HTU) at 300 C and 200 bar. Higher quality oil than pyrolysis oil
+ \item \textbf{Products based on gasification}. Syn-gas is obtained, which can be used to obtain F-T liquids, methanol, etc.
+\end{itemize}
+
+In the Fischer-Tropsch (F-T) process, syn-gas (synthesis gas) is converted to C$_n$H$_{2n+2}$. At takes place at $200<T<300$ C and between 10 and 50 bar. It is an exothermic process and about 20\% of the energy content is released in the form of heat. This heat can be used to power a turbine for electricity production. Sometimes, the gas passes the reactor multiple times, releasing more heat. 
+\begin{align}
+ (2n+1)H_2 + nCO &\rightarrow C_nH_{2n+2} + nH_2O \ \ \ \text{(Co as catalyst)} \\
+ (n+1)H_2 + 2nCO &\rightarrow C_nH_{2n+2} + nCO_2 \ \ \ \text{(Fe as catalyst)}
+\end{align}
+The $C_nH_{2n+2}$ - term are paraffines or alkanes. Advantages are:
+\begin{itemize}
+ \item It is a very clean fuel (less emissions than fossils, can be used in cars)
+ \item It is biodegradable
+ \item High energy density ($\sim$ 35 MJ/l)
+\end{itemize}
+
+
+
+
+\subsubsection{Gas produced by anaerobic digestion}
+\subsubsection{Cost and the environment}
+There is still no real commercial market for liquid fuels and gases based on biomass. It is strongly dependent on local producers. 
+
+\subsection{Public acceptance}
+Public acceptance is essential. 
+
+\subsection{Research and demonstration}
+Main research topics are:
+\begin{itemize}
+ \item \textbf{Feeding material}. Design a conversion system that can handle all kinds of materials.
+ \item \textbf{International trade}. Including 3rd world countries.
+ \item \textbf{System optimization}. Cleaning syn gas, increase overall efficiency.
+ \item \textbf{Liquid fuels and gases}. Including combustion in cars.
+ \item \textbf{Chain analysis}. The entire chain of activities needs to be optimized.
+ \item \textbf{Public acceptance}. Research regarding public acceptability is desirable.
+\end{itemize}
+
+
+
+\subsection{Driving forces and policy}
+Politics is very important regarding the introduction of advanced biomass systems.
+
+\subsection{Conclusions}
+\begin{itemize}
+ \item Biomass is already an important energy source. Importance may even further increase.
+ \item Biomass can create electricity, heat and liquid and gaseous fuels.
+ \item It can supply carbon (C) as basis for petrochemical industry.
+ \item Introduction must be careful, in order to keep it sustainable.
+ \item Costs (including environmental) are comparable to costs of coal.
+ \item Large-scale systems are favorable because they can comply with emission rules easier.
+ \item Bio-transport fuels are already on the market today.
+ \item Public acceptance of biomass needs more attention.
+ \item More R\&D is needed for biomass chain optimization.
+ \item Politics determine the introduction speed.
+\end{itemize}
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
